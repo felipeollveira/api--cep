@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+*{
+    transition-duration: 120ms;
+}
+::selection{
+    background-color: rgba(0, 60, 255, 0.139);
+}
+.container{
+    height: 100vh;
+     display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color:#121212;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.title{
+    font-size: 30pt;
+    text-align: center;
+    transform: translateX(10px);
+
+}
+
+.containerInput {
+   background-color: rgba(255, 255, 255, 0.139);
+   padding: 15px;
+   margin: 20px 0;
+   display: flex;
+   border-radius:5px ;
+}
+
+.containerInput input{
+    background-color: transparent;
+    border: 0;
+    font-size:15pt ;
+    color: #ffff;
+    outline: none;
+    margin-right:5px;
+    
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+::placeholder{
+    font-size: auto;
+    
+}
+
+.buttonSearch, .copy{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    align-items: center;
+    filter: brightness(90%);
+}
+
+.buttonSearch:hover, .copy:hover{
+    filter: brightness(100%);
+    cursor: pointer;
+}
+
+main{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+
+}main h2{font-size: 15pt; padding: 10px;
+
+}main section{
+display: flex; gap: 10px;
+
+}main div{display: flex; align-items: center;
+height: max-content;}
+
+#dados{
+    background-color: #242424bd; border-radius: 2px; 
+    display: grid; gap: 2px;
+    padding: 10px;
+    text-align: left; width:auto;
+}section p{
+    font-size: 8pt;
+    color: #656565fe;
+    border-bottom: 1px solid rgba(175, 175, 175, 0.12);
+}.animate{
+    font-size: 12pt;
+}
+#dados:hover {
+transform: translateY(-1px);
+cursor:default;
+}
+
+.copy:hover .FiCopy{
+    cursor: pointer;
+}
+
+#erro{color:rgb(255, 65, 44);display: flex; font-size: 8pt; width: 100%;
+animation: fadeOut 2s forwards;}
+#sucesso{color: #55ff55;display: flex;font-size: 8pt;}
+#msg{display: flex; opacity: 0.0; }
+#return{ display: grid; text-align: center; transform: translateY(18px);
+width: max-content;}
+
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+      display: flex;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
   }
+
+
+
+@media screen and (max-width:560px) and (min-width:0px){
+    .title{
+        font-size: 28pt;
+        transform: translateX(0px);
+    }
+    main section{
+        display: grid;
+        grid-template-columns: 100%; 
+        border-radius: 15px;
+    }
+    main{
+        padding: 0;
+        margin: 5px;
+        text-align: center;
+    }
+    .copy{
+        color: rgb(255, 255, 255);
+        filter: brightness(100%);
+    }
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
