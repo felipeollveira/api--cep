@@ -108,7 +108,7 @@ cursor:default;
 #erro{color:rgb(255, 65, 44);display: flex; font-size: 8pt; width: 100%;
 animation: fadeOut 2s forwards;}
 #sucesso{color: #55ff55;display: flex;font-size: 8pt;}
-#msg{display: flex; opacity: 0.0; }
+#msg{display: flex; opacity: 1.0; }
 #return{ display: grid; text-align: center; transform: translateY(18px);
 width: max-content;}
 
