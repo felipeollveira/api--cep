@@ -76,12 +76,6 @@ function Modal(){
       alert('Copiado para área de transferência');
     });
      }
-     
-     const StyledDiv = styled.div`
-    display: ${props => props.isVisible ? 'flex' : 'none'};
-    /* Outros estilos aqui */
-    `;
-
     
   
       
@@ -93,9 +87,7 @@ function Modal(){
 
 
       <h1 className="title">Buscador de CEP🌎</h1>
-      <div className='fechar' style={{ display: 'flex' }}>
-        x
-      </div>
+
       
       <div className="containerInput" tabIndex={0}>
         <input

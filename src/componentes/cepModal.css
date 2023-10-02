@@ -1,189 +1,195 @@
-.cep{
- display: flex;
- justify-content: center;
- align-items: center;
- height: 100vh;
- width: 100%;
-
+.cep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f0f0; /* Background color */
 }
 
 .modalOpen {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Transition for modal opening */
+.container {
+  opacity: 1;
+  transform: translateY(-20px);
+  animation: fadeIn 0.3s ease; /* Apply the fadeIn animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
   }
-    /* Transition for modal opening */
-  .container {
-    opacity: 1;
-    transform: translateY(-20px);
-    animation: fadeIn 0.3s ease; /* Apply the fadeIn animation */
-  }
+}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+.btnCep {
+  background-color: #007bff; /* Button background color */
+  color: #ffffff;
+  margin: 20px; /* Adjusted margin */
+  position: absolute;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+.cep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .btnCep {
-    background-color: var(--button);
-    color: #ffffff;
-    margin: 50px;
-    position: absolute;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
+.container {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+}
 
-  .cep {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .title {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333333;
-  }
-  .fechar{
-    cursor: pointer;
-    position: absolute;
-    top: 5%;
-    left:95%;
-     font-size: 8pt; 
-    background-color: #000000;
-    padding: 0px 6px 3px;
-    border-radius: 100%;
-    color: rgb(255, 255, 255);
-    opacity: 0.3;
-  }.fechar:hover{
-    opacity: 0.5;
-  }
-  
-  #return {
-    display: flex;
-    width: auto;
-    text-align: center;
-    justify-content: center;
-      }
-  
-  #msg {
-    padding: 3px 6px;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #555555;
-    display: none;
-  }
-  
-  .containerInput {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .containerInput input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-  }
-  
-  .buttonSearch {
-    background-color: var(--cor-cep);
-    color: #ffffff;
-    padding: 8px 14px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  
-  .buttonSearch:hover {
-    filter: brightness(105%);
-  }
-  
-  main {
-    display: none;
-    margin-top: 20px;
-  }
-  
-  .copy {
-    background-color: var(--cor-cep);
-    color: #ffffff;
-    padding: 10px 14px;
-    border-radius: 0;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom:10px;
-  }
-  
-  .copy:hover span{
-   transform: translateY(-3px);
-    }
-  
-  .FiCopy {
-    margin-left: 10px;
-  }
-  
-  #dados {
-    background-color: #c7c7c700;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 12pt;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.082);
-  }
-  .container section{
-    transform: translateY(-15px);
-    margin-left: 5px;
-  }
-  
-  #dados p {
-    color: #00000074;
-    font-size: 8pt;
-    margin-top:3px;
-    margin-bottom: 3px;
-  }
+.title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+}
 
-  #erro {
-    color: rgb(255, 10, 10);
-    display: flex;
-    font-size: 8pt;
-    width: 100%;
-    animation: fadeOut 2s ;
-  }
-    #sucesso {
-    color: #55ff55;
-    display: flex;
-    font-size: 8pt;
-    animation: fadeOut 2s ;
-  }
-    #msg {
-    display: flex;
-    opacity: 1.0;
-    animation: fadeOut 2s ;
-  }
+.fechar {
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  left: 95%;
+  font-size: 8pt;
+  background-color: #000000;
+  padding: 0px 6px 3px;
+  border-radius: 100%;
+  color: rgb(255, 255, 255);
+  opacity: 0.3;
+}
+
+.fechar:hover {
+  opacity: 0.5;
+}
+
+#return {
+  display: flex;
+  width: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+#msg {
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #555555;
+  display: none;
+}
+
+.containerInput {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.containerInput input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.buttonSearch {
+  background-color: #007bff; /* Button background color */
+  color: #ffffff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.buttonSearch:hover {
+  filter: brightness(105%);
+}
+
+main {
+  display: none;
+  margin-top: 20px;
+}
+
+.copy {
+  background-color: #007bff; /* Button background color */
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.copy:hover span {
+  transform: translateY(-3px);
+}
+
+.FiCopy {
+  margin-left: 10px;
+}
+
+#dados {
+  background-color: #c7c7c700;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12pt;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+}
+
+.container section {
+  transform: translateY(-15px);
+  margin-left: 5px;
+}
+
+#dados p {
+  color: #00000074;
+  font-size: 8pt;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#erro {
+  color: rgb(255, 10, 10);
+  display: flex;
+  font-size: 8pt;
+  width: 100%;
+  animation: fadeOut 2s;
+}
+
+#sucesso {
+  color: #55ff55;
+  display: flex;
+  font-size: 8pt;
+  animation: fadeOut 2s;
+}
+
+#msg {
+  display: flex;
+  opacity: 1.0;
+  animation: fadeOut 2s;
+}
