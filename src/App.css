@@ -1,107 +1,30 @@
-.container{
-    height: 100vh;
-     display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-direction: column;
-    color:white;
-}
+/* styles.css */
 
-body{
-    background-color:#121212;
-}
-
-.title{
-    font-size: 40pt;
-    text-align: center;
-
-}
-
-.containerInput {
-   background-color: rgba(255, 255, 255, 0.139);
-   padding: 15px;
-   margin: 20px 0;
-   display: flex;
-   border-radius:5px ;
-}
-
-.containerInput input{
-    background-color: transparent;
-    border: 0;
-    font-size:15pt ;
-    color: #ffff;
-    outline: none;
-    margin-right:5px;
-    
-}
-
-input[type=number]::-webkit-inner-spin-button { 
-    -webkit-appearance: none;
-    
-}
-input[type=number] { 
-   -moz-appearance: textfield;
-   appearance: textfield;
-}
-
-::placeholder{
-    font-size: auto;
-    
-}
-
-.buttonSearch, .copy{
-    background-color: transparent;
-    color: azure;
-    border: none;
-    transition-duration: 60ms;
-    transition-delay: 50ms;
-    align-items: center;
-    
-}
-
-
-
-
-.buttonSearch:hover, .copy:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    border-radius: 2.5px;
-}
-
-main h2{
-    font-size: 15pt;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition-duration: 120ms;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
    
-}
-
-main section{
-display: flex;background-color: rgba(255, 255, 255, 0.041);
-
-}
-
-main span{
-    font-size: 12pt;
-    
-    padding: 15px;
-}
-
-
-@media screen and (max-width:460px) and (min-width:0px){
-    main section{
-        display: grid;
-        grid-template-columns: 100%; 
-        border-radius: 15px;
+  
+  @media screen and (max-width: 400px) {
+    .title {
+      font-size: 24px;
     }
-    main{
-        padding: 0;
-        text-align: center;
+  
+    main {
+      margin-top: 10px;
     }
-
-}
+  }
+  
+  :root{
+    --cor-cep: rgb(0, 100, 134);
+    --button: rgb(0, 123, 255);
+  }
